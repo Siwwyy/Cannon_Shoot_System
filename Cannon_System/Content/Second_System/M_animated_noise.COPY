@@ -1,0 +1,151 @@
+Begin Object Class=/Script/Engine.Material Name="M_animated_noise"
+   Begin Object Class=/Script/UnrealEd.SceneThumbnailInfoWithPrimitive Name="SceneThumbnailInfoWithPrimitive_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionConstant3Vector Name="MaterialExpressionConstant3Vector_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionNoise Name="MaterialExpressionNoise_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionPanner Name="MaterialExpressionPanner_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionWorldPosition Name="MaterialExpressionWorldPosition_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionComponentMask Name="MaterialExpressionComponentMask_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionComponentMask Name="MaterialExpressionComponentMask_1"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionAppendVector Name="MaterialExpressionAppendVector_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionMultiply Name="MaterialExpressionMultiply_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionScalarParameter Name="MaterialExpressionScalarParameter_2"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionScalarParameter Name="MaterialExpressionScalarParameter_1"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionScalarParameter Name="MaterialExpressionScalarParameter_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionMultiply Name="MaterialExpressionMultiply_2"
+   End Object
+   Begin Object Name="SceneThumbnailInfoWithPrimitive_0"
+   End Object
+   Begin Object Name="MaterialExpressionConstant3Vector_0"
+      Constant=(R=1.000000,G=1.000000,B=1.000000,A=0.000000)
+      MaterialExpressionEditorX=-80
+      MaterialExpressionEditorY=-80
+      MaterialExpressionGuid=2D65D92740D7B9F88BA1D2B93B3C991C
+      Material=Material'"M_animated_noise"'
+   End Object
+   Begin Object Name="MaterialExpressionNoise_0"
+      Position=(Expression=MaterialExpressionMultiply'"M_animated_noise:MaterialExpressionMultiply_0"')
+      MaterialExpressionEditorX=-80
+      MaterialExpressionEditorY=112
+      MaterialExpressionGuid=E64BF69B43B9469FE44518A4B8F9A210
+      Material=Material'"M_animated_noise"'
+      bCollapsed=False
+   End Object
+   Begin Object Name="MaterialExpressionPanner_0"
+      Coordinate=(Expression=MaterialExpressionComponentMask'"M_animated_noise:MaterialExpressionComponentMask_0"')
+      Speed=(Expression=MaterialExpressionScalarParameter'"M_animated_noise:MaterialExpressionScalarParameter_1"')
+      MaterialExpressionEditorX=-704
+      MaterialExpressionEditorY=368
+      MaterialExpressionGuid=24909C47464E5B45226C9BBB1B001BD9
+      Material=Material'"M_animated_noise"'
+   End Object
+   Begin Object Name="MaterialExpressionWorldPosition_0"
+      MaterialExpressionEditorX=-1120
+      MaterialExpressionEditorY=176
+      MaterialExpressionGuid=D698C2084935C2596695FB830A8D599A
+      Material=Material'"M_animated_noise"'
+   End Object
+   Begin Object Name="MaterialExpressionComponentMask_0"
+      Input=(Expression=MaterialExpressionWorldPosition'"M_animated_noise:MaterialExpressionWorldPosition_0"')
+      B=True
+      MaterialExpressionEditorX=-896
+      MaterialExpressionEditorY=224
+      MaterialExpressionGuid=07AF2B2C4165849BDE36BF87F2CD41D2
+      Material=Material'"M_animated_noise"'
+   End Object
+   Begin Object Name="MaterialExpressionComponentMask_1"
+      Input=(Expression=MaterialExpressionWorldPosition'"M_animated_noise:MaterialExpressionWorldPosition_0"')
+      R=True
+      G=True
+      MaterialExpressionEditorX=-896
+      MaterialExpressionEditorY=144
+      MaterialExpressionGuid=07AF2B2C4165849BDE36BF87F2CD41D2
+      Material=Material'"M_animated_noise"'
+   End Object
+   Begin Object Name="MaterialExpressionAppendVector_0"
+      A=(Expression=MaterialExpressionComponentMask'"M_animated_noise:MaterialExpressionComponentMask_1"')
+      B=(Expression=MaterialExpressionMultiply'"M_animated_noise:MaterialExpressionMultiply_2"')
+      MaterialExpressionEditorX=-416
+      MaterialExpressionEditorY=96
+      MaterialExpressionGuid=9AFCFDAD48102310026056919E9D0DE1
+      Material=Material'"M_animated_noise"'
+   End Object
+   Begin Object Name="MaterialExpressionMultiply_0"
+      A=(Expression=MaterialExpressionAppendVector'"M_animated_noise:MaterialExpressionAppendVector_0"')
+      B=(Expression=MaterialExpressionScalarParameter'"M_animated_noise:MaterialExpressionScalarParameter_0"')
+      MaterialExpressionEditorX=-224
+      MaterialExpressionEditorY=96
+      MaterialExpressionGuid=FBBCE19442D03836BDC153BCFAFAD153
+      Material=Material'"M_animated_noise"'
+   End Object
+   Begin Object Name="MaterialExpressionScalarParameter_2"
+      DefaultValue=50.000000
+      ParameterName="widener"
+      ExpressionGUID=10E9C712452477BE6039AEAC7AA81D84
+      MaterialExpressionEditorX=-949
+      MaterialExpressionEditorY=476
+      MaterialExpressionGuid=1B0AC33C406FB07FFC05A89D0F22814B
+      Material=Material'"M_animated_noise"'
+   End Object
+   Begin Object Name="MaterialExpressionScalarParameter_1"
+      DefaultValue=-100.000000
+      ParameterName="speed"
+      ExpressionGUID=77A5EE9045D013610D256AB5F740CCBC
+      MaterialExpressionEditorX=-880
+      MaterialExpressionEditorY=688
+      MaterialExpressionGuid=83FE69D44363E1C2D12169B9300B7A23
+      Material=Material'"M_animated_noise"'
+   End Object
+   Begin Object Name="MaterialExpressionScalarParameter_0"
+      DefaultValue=0.000100
+      ParameterName="scale"
+      ExpressionGUID=474777DE4FE1B4DA7CFAD79D458E2D91
+      MaterialExpressionEditorX=-416
+      MaterialExpressionEditorY=-32
+      MaterialExpressionGuid=13800EFF4E23F307113C2ABFFBD8155A
+      Material=Material'"M_animated_noise"'
+   End Object
+   Begin Object Name="MaterialExpressionMultiply_2"
+      A=(Expression=MaterialExpressionPanner'"M_animated_noise:MaterialExpressionPanner_0"')
+      B=(Expression=MaterialExpressionScalarParameter'"M_animated_noise:MaterialExpressionScalarParameter_2"')
+      MaterialExpressionEditorX=-608
+      MaterialExpressionEditorY=224
+      MaterialExpressionGuid=CD19C2B944AAA3F38E543FAC7DF8184D
+      Material=Material'"M_animated_noise"'
+   End Object
+   EmissiveColor=(Expression=MaterialExpressionConstant3Vector'"MaterialExpressionConstant3Vector_0"')
+   Opacity=(Expression=MaterialExpressionNoise'"MaterialExpressionNoise_0"')
+   BlendMode=BLEND_Translucent
+   EditorX=176
+   EditorY=-32
+   Expressions(0)=MaterialExpressionNoise'"MaterialExpressionNoise_0"'
+   Expressions(1)=MaterialExpressionPanner'"MaterialExpressionPanner_0"'
+   Expressions(2)=MaterialExpressionWorldPosition'"MaterialExpressionWorldPosition_0"'
+   Expressions(3)=MaterialExpressionComponentMask'"MaterialExpressionComponentMask_0"'
+   Expressions(4)=MaterialExpressionComponentMask'"MaterialExpressionComponentMask_1"'
+   Expressions(5)=MaterialExpressionAppendVector'"MaterialExpressionAppendVector_0"'
+   Expressions(6)=MaterialExpressionConstant3Vector'"MaterialExpressionConstant3Vector_0"'
+   Expressions(7)=MaterialExpressionMultiply'"MaterialExpressionMultiply_0"'
+   Expressions(8)=MaterialExpressionMultiply'"MaterialExpressionMultiply_2"'
+   Expressions(9)=MaterialExpressionScalarParameter'"MaterialExpressionScalarParameter_0"'
+   Expressions(10)=MaterialExpressionScalarParameter'"MaterialExpressionScalarParameter_1"'
+   Expressions(11)=MaterialExpressionScalarParameter'"MaterialExpressionScalarParameter_2"'
+   ParameterGroupData(0)=(GroupName="None")
+   ParameterGroupData(1)=(GroupName="None")
+   ParameterGroupData(2)=(GroupName="None")
+   bCanMaskedBeAssumedOpaque=True
+   StateId=A683198D4C0ED2AA586AA084178488DE
+   ThumbnailInfo=SceneThumbnailInfoWithPrimitive'"SceneThumbnailInfoWithPrimitive_0"'
+   LightingGuid=409A9ECF48F80A346F884A8FD4893306
+End Object
